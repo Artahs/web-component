@@ -1,0 +1,53 @@
+.social-btn {
+  color: black;
+  text-decoration: none;
+  margin: 3%;
+  position: relative;
+  padding: 15px 45px;
+  border-radius: 15px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  overflow: hidden;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+.social-btn p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.instagram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    35deg,
+    #f58529,
+    #feda77,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.instagram:hover::before {
+  left: 0;
+}
+
+.social-btn:hover {
+  color: black;
+  border-color: black;
+}
+
+.social-btn > * {
+  position: relative;
+  z-index: 1;
+}
